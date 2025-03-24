@@ -1,0 +1,122 @@
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+.add-schedule {
+    width: 80%; /* 전체 너비의 80% */
+    max-width: 800px;
+    margin: 100px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.input-div label{
+    margin: 10px;
+}
+.top-add-schedule {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* ✅ 입력 필드 공통 스타일 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* ✅ 일정 내용 입력 영역 */
+.input-area {
+    margin-top: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.submit-btn {
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.cancel-btn{
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    background-color: red;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+.cancel-btn:hover{
+    background-color: brown;
+    transform: scale(1.02);
+}
+.button-div{
+    display: flex;
+}
+.submit-btn:active {
+    background-color: #003d82;
+}
+
+.message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #d9534f;
+}
