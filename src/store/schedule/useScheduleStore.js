@@ -12,7 +12,7 @@ export const useScheduleStore = defineStore('schedule', (url, config) => {
     const getSchedule = async (keyword = '', startDate, endDate, nowPage = 1, cntPerPage = 5) => {
         isLoading.value = true;
         try {
-            const response = await axios.get('/schedule', {
+            const response = await axios.get('/schedules', {
                 params: {
                     keyword,
                     startDate,
@@ -39,7 +39,7 @@ export const useScheduleStore = defineStore('schedule', (url, config) => {
       message.value = "";
 
       try{
-          const response = await axios.post('/schedule',scheduleData,{
+          const response = await axios.post('/schedules',scheduleData,{
               headers: {
                   "Content-Type": "application/json", // JSON 데이터 전송 명시
               }
@@ -64,7 +64,7 @@ export const useScheduleStore = defineStore('schedule', (url, config) => {
 
     const getScheduleById = async (id) => {
         try{
-            const response = await axios.get(`/schedule/${id}`);
+            const response = await axios.get(`/schedules/${id}`);
 
             console.log(response.data);
 
@@ -81,7 +81,7 @@ export const useScheduleStore = defineStore('schedule', (url, config) => {
                 content,
                 password
             };
-            const response = await axios.put("/schedule", requestData, {
+            const response = await axios.put("/schedules", requestData, {
                 headers: {
                     "Content-Type": "application/json",
                 }});
@@ -108,7 +108,7 @@ export const useScheduleStore = defineStore('schedule', (url, config) => {
                 id: Number(id),
                 password
             };
-            const response = await axios.delete(`/schedule`, {
+            const response = await axios.delete(`/schedules`, {
                 headers: {
                     "Content-Type": "application/json",
                 },
